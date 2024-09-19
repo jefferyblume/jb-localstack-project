@@ -4,7 +4,7 @@ import pytest
 
 @pytest.fixture
 def aws_clients():
-    # Use 'localhost' since we're connecting from the runner to the service container
+    # Use 'localhost:4566' as the endpoint URL
     s3 = boto3.client('s3', endpoint_url='http://localhost:4566')
     logs = boto3.client('logs', endpoint_url='http://localhost:4566')
     return s3, logs

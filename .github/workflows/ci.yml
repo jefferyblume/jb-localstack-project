@@ -15,19 +15,21 @@ jobs:
     runs-on: ubuntu-latest
     services:
       localstack:
-        image: localstack/localstack:1.3  # Use LocalStack version 1.3
+        image: localstack/localstack:latest
         env:
           SERVICES: lambda,s3,iam
           DEBUG: 1
-          LAMBDA_EXECUTOR: local
+          LOCALSTACK_API_KEY: ${{ secrets.LOCALSTACK_API_KEY }}
+        ports:
+          - 4566:4566
         options: >-
           --name localstack
-          --health-cmd "curl -f http://localhost:4566/health || exit 1"
+          --health-cmd "curl -f http://localhost:4566/_localstack/health || exit 1"
           --health-interval 5s
           --health-timeout 2s
-          --health-retries 60
+          --health-retries 40
           --cpus="1.5"
-          --memory="4g"
+          --memory="3g"
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -42,11 +44,6 @@ jobs:
           pip install -r requirements.txt
           pip install awscli
 
-      - name: Check LocalStack container status
-        run: |
-          docker ps -a
-          docker inspect localstack || true
-
       - name: Wait for LocalStack to be ready
         run: |
           echo "Waiting for LocalStack to be ready..."
@@ -54,9 +51,9 @@ jobs:
           until [ $n -ge 60 ]
           do
             echo "Attempt $n: Checking LocalStack health..."
-            health=$(curl -s http://localhost:4566/health)
+            health=$(curl -s http://localhost:4566/_localstack/health || true)
             echo "Health response: $health"
-            if echo "$health" | grep "\"running\": true"; then
+            if echo "$health" | grep "\"status\": \"running\""; then
               echo "LocalStack is ready."
               exit 0
             fi
@@ -84,6 +81,7 @@ jobs:
           pytest tests/
 
       - name: Clean up
+        if: always()
         env:
           AWS_ACCESS_KEY_ID: test
           AWS_SECRET_ACCESS_KEY: test
