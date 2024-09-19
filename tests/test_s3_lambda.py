@@ -4,7 +4,7 @@ import pytest
 
 @pytest.fixture
 def aws_clients():
-    # Use the Docker service hostname 'localstack'
+    # Use the service hostname 'localstack' instead of 'localhost'
     s3 = boto3.client('s3', endpoint_url='http://localstack:4566')
     logs = boto3.client('logs', endpoint_url='http://localstack:4566')
     return s3, logs
