@@ -19,16 +19,16 @@ jobs:
         env:
           SERVICES: lambda,s3,iam
           DEBUG: 1
-          LAMBDA_EXECUTOR: local  # Use 'local' executor
+          LAMBDA_EXECUTOR: local
           DATA_DIR: /tmp/localstack/data
         options: >-
           --name localstack
           --health-cmd "curl -f http://localhost:4566/health || exit 1"
           --health-interval 5s
           --health-timeout 2s
-          --health-retries 20
-          --cpus 0.5
-          --memory 1g
+          --health-retries 40
+          --cpus="1.5"
+          --memory="3g"
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -75,27 +75,8 @@ jobs:
         run: |
           terraform destroy -auto-approve
 
-      - name: Dump LocalStack logs on failure
+      - name: Dump LocalStack container logs on failure
         if: failure()
         run: |
           echo "LocalStack container logs:"
-          docker logs localstack
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    services:
-  localstack:
-    image: localstack/localstack:latest
-    env:
-      SERVICES: lambda,s3,iam
-      DEBUG: 1
-      LAMBDA_EXECUTOR: local
-      DATA_DIR: /tmp/localstack/data
-    options: >-
-      --name localstack
-      --health-cmd "curl -f http://localhost:4566/health || exit 1"
-      --health-interval 5s
-      --health-timeout 2s
-      --health-retries 20
-      --cpus="2.0"
-      --memory="4g"
+          docker logs localstack || true
