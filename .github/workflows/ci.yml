@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       localstack:
-        image: localstack/localstack:latest
+        image: localstack/localstack:1.3
         env:
           SERVICES: lambda,s3,iam
           DEBUG: 1
