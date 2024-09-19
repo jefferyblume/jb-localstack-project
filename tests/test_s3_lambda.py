@@ -9,6 +9,7 @@ def aws_clients():
     logs = boto3.client('logs', endpoint_url='http://localstack:4566')
     return s3, logs
 
+
 def test_s3_to_lambda_trigger(aws_clients):
     s3_client, logs_client = aws_clients
 
