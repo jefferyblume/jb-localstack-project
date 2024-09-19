@@ -17,9 +17,9 @@ jobs:
       localstack:
         image: localstack/localstack:latest
         env:
-          SERVICES: lambda,s3,iam,cloudwatch,logs
+          SERVICES: lambda,s3,iam
           DEBUG: 1
-          LAMBDA_EXECUTOR: local
+          LAMBDA_EXECUTOR: local  # Use 'local' executor
           DATA_DIR: /tmp/localstack/data
         options: >-
           --name localstack
@@ -68,10 +68,14 @@ jobs:
           pytest tests/
 
       - name: Clean up
+        env:
+          AWS_ACCESS_KEY_ID: test
+          AWS_SECRET_ACCESS_KEY: test
+          AWS_DEFAULT_REGION: us-east-1
         run: |
           terraform destroy -auto-approve
 
-      - name: Dump LocalStack service logs on failure
+      - name: Dump LocalStack logs on failure
         if: failure()
         run: |
           echo "LocalStack container logs:"
