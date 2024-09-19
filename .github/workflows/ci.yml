@@ -15,20 +15,19 @@ jobs:
     runs-on: ubuntu-latest
     services:
       localstack:
-        image: localstack/localstack:1.3
+        image: localstack/localstack:1.3  # Use LocalStack version 1.3
         env:
           SERVICES: lambda,s3,iam
           DEBUG: 1
           LAMBDA_EXECUTOR: local
-          DATA_DIR: /tmp/localstack/data
         options: >-
           --name localstack
           --health-cmd "curl -f http://localhost:4566/health || exit 1"
           --health-interval 5s
           --health-timeout 2s
-          --health-retries 40
+          --health-retries 60
           --cpus="1.5"
-          --memory="3g"
+          --memory="4g"
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -38,17 +37,34 @@ jobs:
         with:
           python-version: '3.8'
 
-      - name: Install dependencies
+      - name: Install AWS CLI and dependencies
         run: |
           pip install -r requirements.txt
+          pip install awscli
+
+      - name: Check LocalStack container status
+        run: |
+          docker ps -a
+          docker inspect localstack || true
 
       - name: Wait for LocalStack to be ready
         run: |
           echo "Waiting for LocalStack to be ready..."
-          until curl -s http://localstack:4566/health | grep "\"services\": {"; do
+          n=0
+          until [ $n -ge 60 ]
+          do
+            echo "Attempt $n: Checking LocalStack health..."
+            health=$(curl -s http://localhost:4566/health)
+            echo "Health response: $health"
+            if echo "$health" | grep "\"running\": true"; then
+              echo "LocalStack is ready."
+              exit 0
+            fi
+            n=$((n+1))
             sleep 5
           done
-          echo "LocalStack is ready."
+          echo "LocalStack failed to start within expected time."
+          exit 1
 
       - name: Apply Terraform configuration
         env:

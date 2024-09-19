@@ -4,11 +4,10 @@ import pytest
 
 @pytest.fixture
 def aws_clients():
-    # Use the service hostname 'localstack' instead of 'localhost'
-    s3 = boto3.client('s3', endpoint_url='http://localstack:4566')
-    logs = boto3.client('logs', endpoint_url='http://localstack:4566')
+    # Use 'localhost' since we're connecting from the runner to the service container
+    s3 = boto3.client('s3', endpoint_url='http://localhost:4566')
+    logs = boto3.client('logs', endpoint_url='http://localhost:4566')
     return s3, logs
-
 
 def test_s3_to_lambda_trigger(aws_clients):
     s3_client, logs_client = aws_clients
