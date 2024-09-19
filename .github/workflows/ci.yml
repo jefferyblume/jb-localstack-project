@@ -21,8 +21,14 @@ jobs:
         env:
           SERVICES: lambda,s3,iam,cloudwatch,logs
           DEBUG: 1
-          LAMBDA_EXECUTOR: docker-reuse
+          LAMBDA_EXECUTOR: docker
           DATA_DIR: /tmp/localstack/data
+        options: >-
+          --name localstack
+          --health-cmd "curl -f http://localhost:4566/health || exit 1"
+          --health-interval 5s
+          --health-timeout 2s
+          --health-retries 20
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -36,6 +42,19 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Wait for LocalStack to be ready
+        run: |
+          echo "Waiting for LocalStack to be ready..."
+          until curl -s http://localstack:4566/health | grep "\"initialized\": true"; do
+            sleep 5
+          done
+          echo "LocalStack is ready."
+
+      - name: Apply Terraform configuration
+        run: |
+          terraform init
+          terraform apply -auto-approve
+
       - name: Run tests
         env:
           AWS_ACCESS_KEY_ID: test
@@ -46,4 +65,5 @@ jobs:
 
       - name: Clean up
         run: |
+          terraform destroy -auto-approve
           docker-compose down
