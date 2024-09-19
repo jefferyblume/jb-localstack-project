@@ -80,3 +80,18 @@ jobs:
         run: |
           echo "LocalStack container logs:"
           docker logs localstack
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      localstack:
+        image: localstack/localstack:latest
+        # ... (other configurations)
+    steps:
+      # ... (your existing steps)
+
+      - name: Dump LocalStack container logs on failure
+        if: failure()
+        run: |
+          echo "LocalStack container logs:"
+          docker logs localstack || true
