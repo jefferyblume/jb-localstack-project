@@ -1,0 +1,171 @@
+LocalStack supervisor: starting
+LocalStack supervisor: localstack process (PID 16) starting
+2024-09-18T21:01:10.166 DEBUG --- [  MainThread] l.utils.docker_utils       : Using SdkDockerClient. LEGACY_DOCKER_CLIENT: False, SDK installed: True
+2024-09-18T21:01:10.317  WARN --- [  MainThread] l.services.internal        : Enabling diagnose endpoint, please be aware that this can expose sensitive information via your network.
+2024-09-18T21:01:10.322 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.runtime.components.aws = <class 'localstack.aws.components.AwsComponents'>)
+2024-09-18T21:01:10.323 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.runtime.components:aws
+
+LocalStack version: 3.7.3.dev34
+LocalStack build date: 2024-09-18
+LocalStack build git hash: dc644a718
+
+2024-09-18T21:01:10.323 DEBUG --- [  MainThread] localstack.utils.run       : Executing command: rm -rf "/tmp/localstack"
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start._patch_botocore_endpoint_in_memory = <function _patch_botocore_endpoint_in_memory at 0xffffb7f6b920>)
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : plugin localstack.hooks.on_infra_start:_patch_botocore_endpoint_in_memory is disabled, reason: Load condition for plugin was false
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start._patch_botocore_json_parser = <function _patch_botocore_json_parser at 0xffffb7f6b560>)
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:_patch_botocore_json_parser
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start._patch_cbor2 = <function _patch_cbor2 at 0xffffb7f6b6a0>)
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:_patch_cbor2
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start._publish_config_as_analytics_event = <function _publish_config_as_analytics_event at 0xffffb6e59760>)
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:_publish_config_as_analytics_event
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start._publish_container_info = <function _publish_container_info at 0xffffb6e59b20>)
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:_publish_container_info
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start._run_init_scripts_on_start = <function _run_init_scripts_on_start at 0xffffb6deb600>)
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:_run_init_scripts_on_start
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start.apply_aws_runtime_patches = <function apply_aws_runtime_patches at 0xffffb6e59e40>)
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:apply_aws_runtime_patches
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start.apply_runtime_patches = <function apply_runtime_patches at 0xffffb6e5a200>)
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:apply_runtime_patches
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start.conditionally_enable_debugger = <function conditionally_enable_debugger at 0xffffb6e5a660>)
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:conditionally_enable_debugger
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start.delete_cached_certificate = <function delete_cached_certificate at 0xffffb6e5a980>)
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : plugin localstack.hooks.on_infra_start:delete_cached_certificate is disabled, reason: Load condition for plugin was false
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start.deprecation_warnings = <function deprecation_warnings at 0xffffb6e5a7a0>)
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:deprecation_warnings
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start.register_cloudformation_deploy_ui = <function register_cloudformation_deploy_ui at 0xffffb6e5aca0>)
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:register_cloudformation_deploy_ui
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start.register_custom_endpoints = <function register_custom_endpoints at 0xffffb6d1a700>)
+2024-09-18T21:01:10.337 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:register_custom_endpoints
+2024-09-18T21:01:10.338 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start.setup_dns_configuration_on_host = <function setup_dns_configuration_on_host at 0xffffb6d1ab60>)
+2024-09-18T21:01:10.338 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:setup_dns_configuration_on_host
+2024-09-18T21:01:10.338 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start.start_dns_server = <function start_dns_server at 0xffffb6d1aa20>)
+2024-09-18T21:01:10.338 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:start_dns_server
+2024-09-18T21:01:10.338 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_start.validate_configuration = <function validate_configuration at 0xffffb6d1a5c0>)
+2024-09-18T21:01:10.338 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_start:validate_configuration
+2024-09-18T21:01:10.486 DEBUG --- [  MainThread] localstack.dns.server      : Determined fallback dns: 127.0.0.11
+2024-09-18T21:01:10.487 DEBUG --- [  MainThread] localstack.dns.server      : Starting DNS servers (tcp/udp port 53 on 0.0.0.0)...
+2024-09-18T21:01:10.487 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*localhost.localstack.cloud pointing to LocalStack
+2024-09-18T21:01:10.487 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*localhost.localstack.cloud with record DynamicRecord(record_type=<RecordType.A: 1>, record_id=None)
+2024-09-18T21:01:10.487 DEBUG --- [  MainThread] localstack.dns.server      : Adding host .*localhost.localstack.cloud with record DynamicRecord(record_type=<RecordType.AAAA: 2>, record_id=None)
+2024-09-18T21:01:10.488 DEBUG --- [-functhread1] localstack.dns.server      : DNS Server started
+2024-09-18T21:01:11.503 DEBUG --- [  MainThread] localstack.dns.server      : DNS server startup finished.
+2024-09-18T21:01:11.504 DEBUG --- [  MainThread] localstack.runtime.init    : Init scripts discovered: {BOOT: [], START: [], READY: [], SHUTDOWN: []}
+2024-09-18T21:01:11.504 DEBUG --- [  MainThread] localstack.plugins         : Checking for the usage of deprecated community features and configs...
+2024-09-18T21:01:11.504  WARN --- [  MainThread] localstack.deprecations    : DATA_DIR is deprecated (since 1.0.0) and will be removed in upcoming releases of LocalStack! Please use PERSISTENCE instead. The state will be stored in your LocalStack volume in the state/ directory.
+2024-09-18T21:01:11.506  WARN --- [  MainThread] localstack.deprecations    : LAMBDA_EXECUTOR is deprecated (since 2.0.0) and will be removed in upcoming releases of LocalStack! This configuration is obsolete with the new lambda provider https://docs.localstack.cloud/user-guide/aws/lambda/#migrating-to-lambda-v2
+Please mount the Docker socket /var/run/docker.sock as a volume when starting LocalStack.
+2024-09-18T21:01:11.512 DEBUG --- [  MainThread] localstack.dns.server      : Overwriting container DNS server to point to localhost
+2024-09-18T21:01:11.513 DEBUG --- [  MainThread] localstack.utils.ssl       : Attempting to download local SSL certificate file
+2024-09-18T21:01:11.756 DEBUG --- [  MainThread] localstack.utils.ssl       : SSL certificate downloaded successfully
+2024-09-18T21:01:11.761 DEBUG --- [  MainThread] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.runtime.server.twisted = <class 'localstack.runtime.server.plugins.TwistedRuntimeServerPlugin'>)
+2024-09-18T21:01:11.761 DEBUG --- [  MainThread] plux.runtime.manager       : loading plugin localstack.runtime.server:twisted
+2024-09-18T21:01:11.984 DEBUG --- [ady_monitor)] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_ready._run_init_scripts_on_ready = <function _run_init_scripts_on_ready at 0xffffb6deb740>)
+2024-09-18T21:01:11.984 DEBUG --- [ady_monitor)] plux.runtime.manager       : loading plugin localstack.hooks.on_infra_ready:_run_init_scripts_on_ready
+2024-09-18T21:01:11.984 DEBUG --- [ady_monitor)] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.hooks.on_infra_ready.register_virtual_host_routes = <function register_virtual_host_routes at 0xffffa5dd20c0>)
+2024-09-18T21:01:11.984 DEBUG --- [ady_monitor)] plux.runtime.manager       : plugin localstack.hooks.on_infra_ready:register_virtual_host_routes is disabled, reason: Load condition for plugin was false
+Ready.
+2024-09-18T21:01:15.077 DEBUG --- [et.reactor-0] l.a.p.service_router       : building service catalog index cache file /var/lib/localstack/cache/service-catalog-3_7_3_dev34-1_35_14.pickle
+2024-09-18T21:01:27.466 DEBUG --- [et.reactor-0] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.aws.provider.s3:default = <function s3 at 0xffff80bf84a0>)
+2024-09-18T21:01:27.466 DEBUG --- [et.reactor-0] plux.runtime.manager       : loading plugin localstack.aws.provider:s3:default
+2024-09-18T21:02:12.258  INFO --- [et.reactor-0] localstack.request.aws     : AWS s3.HeadBucket => 404 (NoSuchBucket)
+2024-09-18T21:02:13.951 DEBUG --- [et.reactor-0] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.aws.provider.iam:default = <function iam at 0xffff80b031a0>)
+2024-09-18T21:02:13.951 DEBUG --- [et.reactor-0] plux.runtime.manager       : loading plugin localstack.aws.provider:iam:default
+2024-09-18T21:02:13.952  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.HeadBucket => 404 (NoSuchBucket)
+2024-09-18T21:02:13.962  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.CreateBucket => 200
+2024-09-18T21:02:13.970  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.HeadBucket => 200
+2024-09-18T21:02:13.972  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.HeadBucket => 200
+2024-09-18T21:02:13.981  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.GetBucketPolicy => 404 (NoSuchBucketPolicy)
+2024-09-18T21:02:14.000  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.GetBucketAcl => 200
+2024-09-18T21:02:14.017  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.GetBucketCors => 404 (NoSuchCORSConfiguration)
+2024-09-18T21:02:14.038  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.GetBucketWebsite => 404 (NoSuchWebsiteConfiguration)
+2024-09-18T21:02:14.053  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.GetBucketVersioning => 200
+2024-09-18T21:02:14.068  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.GetBucketAccelerateConfiguration => 200
+2024-09-18T21:02:14.070  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.GetBucketRequestPayment => 200
+2024-09-18T21:02:14.076  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.GetBucketLogging => 200
+2024-09-18T21:02:14.078  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.GetBucketLifecycleConfiguration => 404 (NoSuchLifecycleConfiguration)
+2024-09-18T21:02:14.082  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.GetBucketReplication => 404 (ReplicationConfigurationNotFoundError)
+2024-09-18T21:02:14.089  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.GetBucketEncryption => 200
+2024-09-18T21:02:14.096  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.GetObjectLockConfiguration => 404 (ObjectLockConfigurationNotFoundError)
+2024-09-18T21:02:14.101  INFO --- [et.reactor-0] localstack.request.aws     : AWS iam.CreateRole => 200
+2024-09-18T21:02:14.103  INFO --- [et.reactor-0] localstack.request.aws     : AWS s3.HeadBucket => 200
+2024-09-18T21:02:14.107  INFO --- [et.reactor-1] localstack.request.aws     : AWS iam.GetRole => 200
+2024-09-18T21:02:14.110  INFO --- [et.reactor-0] localstack.request.aws     : AWS iam.ListRolePolicies => 200
+2024-09-18T21:02:14.111  INFO --- [et.reactor-2] localstack.request.aws     : AWS s3.GetBucketTagging => 404 (NoSuchTagSet)
+2024-09-18T21:02:14.113  INFO --- [et.reactor-1] localstack.request.aws     : AWS iam.ListAttachedRolePolicies => 200
+2024-09-18T21:02:14.144 DEBUG --- [et.reactor-2] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.aws.provider.lambda:default = <function lambda_ at 0xffff80b036a0>)
+2024-09-18T21:02:14.144 DEBUG --- [et.reactor-2] plux.runtime.manager       : loading plugin localstack.aws.provider:lambda:default
+2024-09-18T21:02:14.248 DEBUG --- [et.reactor-2] l.s.lambda_.urlrouter      : Registering parameterized Lambda routes.
+2024-09-18T21:02:14.250 DEBUG --- [et.reactor-2] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.lambda.runtime_executor.docker = <class 'localstack.services.lambda_.invocation.plugins.DockerRuntimeExecutorPlugin'>)
+2024-09-18T21:02:14.250 DEBUG --- [et.reactor-2] plux.runtime.manager       : loading plugin localstack.lambda.runtime_executor:docker
+2024-09-18T21:02:14.274 DEBUG --- [et.reactor-0] plux.runtime.manager       : instantiating plugin PluginSpec(localstack.aws.provider.sts:default = <function sts at 0xffff80b032e0>)
+2024-09-18T21:02:14.274 DEBUG --- [et.reactor-0] plux.runtime.manager       : loading plugin localstack.aws.provider:sts:default
+2024-09-18T21:02:14.326 DEBUG --- [rvice-task_0] l.s.l.invocation.logs      : Service 'logs' is disabled, not storing any logs for lambda executions
+2024-09-18T21:02:14.327  INFO --- [et.reactor-2] localstack.request.aws     : AWS lambda.CreateFunction => 201
+2024-09-18T21:02:14.328 DEBUG --- [rvice-task_0] localstack.packages.api    : Installation of lambda-runtime skipped (already installed).
+2024-09-18T21:02:14.328 DEBUG --- [rvice-task_0] localstack.packages.api    : Performing runtime setup for already installed package.
+2024-09-18T21:02:14.328 DEBUG --- [rvice-task_0] l.s.l.i.lambda_models      : Saving code s3-event-handler-e23ee1f4-5306-4f13-a433-85abe72d3169 to disk
+2024-09-18T21:02:14.332  INFO --- [et.reactor-0] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-09-18T21:02:14.337 DEBUG --- [rvice-task_0] localstack.utils.run       : Executing command: ['unzip', '-o', '-q', '/tmp/tmp48tkraqe']
+2024-09-18T21:02:14.338 DEBUG --- [rvice-task_0] l.u.c.docker_sdk_client    : Pulling Docker image: public.ecr.aws/lambda/python:3.8
+2024-09-18T21:02:19.349  INFO --- [et.reactor-0] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-09-18T21:02:19.559  INFO --- [et.reactor-2] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-09-18T21:02:19.966  INFO --- [et.reactor-1] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-09-18T21:02:20.777  INFO --- [et.reactor-0] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-09-18T21:02:22.389  INFO --- [et.reactor-2] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-09-18T21:02:25.602  INFO --- [et.reactor-0] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-09-18T21:02:32.022  INFO --- [et.reactor-2] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-09-18T21:02:41.042 DEBUG --- [rvice-task_0] l.s.l.i.version_manager    : Version preparation of function arn:aws:lambda:us-east-1:000000000000:function:s3-event-handler:$LATEST took 26716.12ms
+2024-09-18T21:02:41.043 DEBUG --- [rvice-task_0] l.s.l.i.version_manager    : Changing Lambda arn:aws:lambda:us-east-1:000000000000:function:s3-event-handler:$LATEST (id 612d2cc3) to active
+2024-09-18T21:02:41.043 DEBUG --- [rvice-task_0] l.s.l.i.event_manager      : Starting event manager arn:aws:lambda:us-east-1:000000000000:function:s3-event-handler:$LATEST id 281472798129936
+2024-09-18T21:02:42.059  INFO --- [et.reactor-0] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-09-18T21:02:42.063  INFO --- [et.reactor-2] localstack.request.aws     : AWS lambda.GetFunction => 200
+2024-09-18T21:02:42.066  INFO --- [et.reactor-1] localstack.request.aws     : AWS lambda.ListVersionsByFunction => 200
+2024-09-18T21:02:42.069  INFO --- [et.reactor-0] localstack.request.aws     : AWS lambda.GetFunctionCodeSigningConfig => 200
+2024-09-18T21:02:42.087  INFO --- [et.reactor-2] localstack.request.aws     : AWS lambda.AddPermission => 201
+2024-09-18T21:02:42.092  INFO --- [et.reactor-1] localstack.request.aws     : AWS lambda.GetPolicy => 200
+2024-09-18T21:02:42.151  INFO --- [et.reactor-0] localstack.request.aws     : AWS s3.PutBucketNotificationConfiguration => 200
+2024-09-18T21:02:42.153  INFO --- [et.reactor-0] localstack.request.aws     : AWS s3.GetBucketNotificationConfiguration => 200
+2024-09-18T21:02:42.156  INFO --- [et.reactor-2] localstack.request.aws     : AWS s3.GetBucketNotificationConfiguration => 200
+2024-09-18T21:13:21.587 DEBUG --- [et.reactor-2] l.s.s3.notifications       : Submitting task to the executor for notifier <localstack.services.s3.notifications.LambdaNotifier object at 0xffff800937d0>
+2024-09-18T21:13:21.604  INFO --- [et.reactor-2] localstack.request.aws     : AWS s3.PutObject => 200
+2024-09-18T21:13:21.610 DEBUG --- [-functhread6] l.services.sqs.models      : de-queued message SqsMessage(id=f88fe321-893a-4e18-be3d-d51c6ee79ca9,group=None) from arn:aws:sqs:us-east-1:949334387222:s3-event-handler-035a49fce00fef035840a4706d48d975
+2024-09-18T21:13:21.610 DEBUG --- [-functhread6] l.s.l.i.event_manager      : [s3-event-handler-035a49fce00fef035840a4706d48d975] Got 1 messages
+2024-09-18T21:13:21.611 DEBUG --- [er:$LATEST_0] l.s.l.i.version_manager    : Got an invocation for function arn:aws:lambda:us-east-1:000000000000:function:s3-event-handler:$LATEST with request_id 0d237b9d-148e-4cea-81e8-d1e2a13b7c41
+2024-09-18T21:13:21.611 DEBUG --- [er:$LATEST_0] l.s.l.i.assignment         : Starting new environment
+2024-09-18T21:13:21.624 DEBUG --- [er:$LATEST_0] l.s.l.i.docker_runtime_exe : Assigning container name of localstack-lambda-s3-event-handler-1aef49e1b0518d37fc19bf34a6c16405 to executor 1aef49e1b0518d37fc19bf34a6c16405
+2024-09-18T21:13:21.642 DEBUG --- [er:$LATEST_0] l.u.c.container_client     : Getting networks for container: localstack
+2024-09-18T21:13:21.648  INFO --- [er:$LATEST_0] l.u.container_networking   : Determined main container network: jb-localstack-project_default
+2024-09-18T21:13:21.648 DEBUG --- [er:$LATEST_0] l.u.c.container_client     : Getting ipv4 address for container localstack in network jb-localstack-project_default.
+2024-09-18T21:13:21.655  INFO --- [er:$LATEST_0] l.u.container_networking   : Determined main container target IP: 172.18.0.2
+2024-09-18T21:13:21.661 DEBUG --- [er:$LATEST_0] l.u.c.docker_sdk_client    : Creating container with attributes: {'self': <localstack.utils.container_utils.docker_sdk_client.SdkDockerClient object at 0xffffb7e0d450>, 'image_name': 'public.ecr.aws/lambda/python:3.8', 'name': 'localstack-lambda-s3-event-handler-1aef49e1b0518d37fc19bf34a6c16405', 'entrypoint': '/var/rapid/init', 'remove': False, 'interactive': False, 'tty': False, 'detach': False, 'command': None, 'volumes': [], 'ports': <PortMappings: {}>, 'exposed_ports': [], 'env_vars': {'AWS_DEFAULT_REGION': 'us-east-1', 'AWS_REGION': 'us-east-1', 'AWS_LAMBDA_FUNCTION_NAME': 's3-event-handler', 'AWS_LAMBDA_FUNCTION_MEMORY_SIZE': 128, 'AWS_LAMBDA_FUNCTION_VERSION': '$LATEST', 'AWS_LAMBDA_INITIALIZATION_TYPE': 'on-demand', 'AWS_LAMBDA_LOG_GROUP_NAME': '/aws/lambda/s3-event-handler', 'AWS_LAMBDA_LOG_STREAM_NAME': '2024/09/18/[$LATEST]1aef49e1b0518d37fc19bf34a6c16405', 'AWS_ACCESS_KEY_ID': 'LSIAQAAAAAAAOESPJWII', 'AWS_SECRET_ACCESS_KEY': 'o5D3CETQqavaVk4DJdE/XW4+6QNm1zQT5OL81jgM', 'AWS_SESSION_TOKEN': 'FQoGZXIvYXdzEBYaDA+O3ZOD7D2M7ZOTHK1W5vxOCycIZgbxnN1iLxLcpTWzXzx3PVEwVlDOaTw63JvCxYEvlysp5q0Aar6Tk5v3DGywxdcg620KeIDbi5wEmsl0OwC1yomWBGjjYqSkO4pOcnTvDc7wGCtYSb7B1c6eu4lC8vgFkMHY0IzKmzbM+MJLXpOLZVB9sZ1bKYFJ19wq6Xjbv4O32OSQz9dThpUGcGnlfhpTyyWbCKCr39cwMl+RH6XfwJED7zFhNHFe3mlV1TqYvpL37cYsgHF1sEC0QYPQX+jARHMfXFB0d5FITQfSg5zKi9mk4PgcGqS/RQuftg/jLBwU5ukulbtTZS4=', 'LAMBDA_TASK_ROOT': '/var/task', 'LAMBDA_RUNTIME_DIR': '/var/runtime', 'AWS_XRAY_CONTEXT_MISSING': 'LOG_ERROR', 'AWS_XRAY_DAEMON_ADDRESS': '127.0.0.1:2000', '_AWS_XRAY_DAEMON_PORT': '2000', '_AWS_XRAY_DAEMON_ADDRESS': '127.0.0.1', 'TZ': ':UTC', 'AWS_LAMBDA_FUNCTION_TIMEOUT': 3, 'LOCALSTACK_HOSTNAME': '172.18.0.2', 'EDGE_PORT': '4566', 'LOCALSTACK_RUNTIME_ID': '1aef49e1b0518d37fc19bf34a6c16405', 'LOCALSTACK_RUNTIME_ENDPOINT': 'http://172.18.0.2:4566/_localstack_lambda/1aef49e1b0518d37fc19bf34a6c16405', 'LOCALSTACK_FUNCTION_ACCOUNT_ID': '000000000000', 'AWS_ENDPOINT_URL': 'http://172.18.0.2:4566', '_HANDLER': 'lambda_function.lambda_handler', 'AWS_EXECUTION_ENV': 'AWS_Lambda_rapid', 'LOCALSTACK_MAX_PAYLOAD_SIZE': 6291556, 'LOCALSTACK_CHMOD_PATHS': '[{"path": "/tmp", "mode": "0700"}]'}, 'user': None, 'cap_add': None, 'cap_drop': None, 'security_opt': None, 'network': 'jb-localstack-project_default', 'dns': '172.18.0.2', 'additional_flags': '', 'workdir': None, 'privileged': False, 'labels': None, 'platform': 'linux/amd64', 'ulimits': None, 'init': None, 'log_config': None}
+2024-09-18T21:13:21.693 DEBUG --- [er:$LATEST_0] l.u.c.docker_sdk_client    : Copying file /usr/lib/localstack/lambda-runtime/v0.1.29-pre/arm64/. into localstack-lambda-s3-event-handler-1aef49e1b0518d37fc19bf34a6c16405:/
+2024-09-18T21:13:21.867 DEBUG --- [er:$LATEST_0] l.u.c.docker_sdk_client    : Copying file /tmp/lambda/awslambda-us-east-1-tasks/s3-event-handler-e23ee1f4-5306-4f13-a433-85abe72d3169/code/. into localstack-lambda-s3-event-handler-1aef49e1b0518d37fc19bf34a6c16405:/var/task
+2024-09-18T21:13:21.878 DEBUG --- [er:$LATEST_0] l.u.c.docker_sdk_client    : Starting container localstack-lambda-s3-event-handler-1aef49e1b0518d37fc19bf34a6c16405
+2024-09-18T21:13:22.053 DEBUG --- [er:$LATEST_0] l.u.c.container_client     : Getting ipv4 address for container localstack-lambda-s3-event-handler-1aef49e1b0518d37fc19bf34a6c16405 in network jb-localstack-project_default.
+2024-09-18T21:13:22.278  INFO --- [et.reactor-2] localstack.request.http    : POST /_localstack_lambda/1aef49e1b0518d37fc19bf34a6c16405/status/1aef49e1b0518d37fc19bf34a6c16405/ready => 202
+2024-09-18T21:13:22.278 DEBUG --- [er:$LATEST_0] l.s.l.i.execution_environm : Start of execution environment 1aef49e1b0518d37fc19bf34a6c16405 for function arn:aws:lambda:us-east-1:000000000000:function:s3-event-handler:$LATEST took 653.11ms
+2024-09-18T21:13:22.279 DEBUG --- [er:$LATEST_0] l.s.l.i.docker_runtime_exe : Sending invoke-payload '{"invoke-id": "0d237b9d-148e-4cea-81e8-d1e2a13b7c41", "invoked-function-arn": "arn:aws:lambda:us-east-1:000000000000:function:s3-event-handler", "payload": "{\"Records\": [{\"eventVersion\": \"2.1\", \"eventSource\": \"aws:s3\", \"awsRegion\": \"us-east-1\", \"eventTime\": \"2024-09-18T21:13:21.586Z\", \"eventName\": \"ObjectCreated:Put\", \"userIdentity\": {\"principalId\": \"AIDAJDPLRKLG7UEXAMPLE\"}, \"requestParameters\": {\"sourceIPAddress\": \"127.0.0.1\"}, \"responseElements\": {\"x-amz-request-id\": \"83cb31fc\", \"x-amz-id-2\": \"eftixk72aD6Ap51TnqcoF8eFidJG9Z/2\"}, \"s3\": {\"s3SchemaVersion\": \"1.0\", \"configurationId\": \"tf-s3-lambda-20240918210242106800000001\", \"bucket\": {\"name\": \"my-test-bucket\", \"ownerIdentity\": {\"principalId\": \"A3NL1KOZZKExample\"}, \"arn\": \"arn:aws:s3:::my-test-bucket\"}, \"object\": {\"key\": \"test_file.txt\", \"sequencer\": \"0055AED6DCD90281E5\", \"eTag\": \"93359788b1400aa421d4bd32172a1812\", \"size\": 19}}}]}", "trace-id": "Root=1-66eb4272-341ebdcfd5e2c7877e16497c;Parent=8ff17b1a6f184df0;Sampled=0"}' to executor '1aef49e1b0518d37fc19bf34a6c16405'
+2024-09-18T21:13:22.286  INFO --- [et.reactor-1] localstack.request.http    : POST /_localstack_lambda/1aef49e1b0518d37fc19bf34a6c16405/invocations/0d237b9d-148e-4cea-81e8-d1e2a13b7c41/logs => 202
+2024-09-18T21:13:22.287  INFO --- [et.reactor-0] localstack.request.http    : POST /_localstack_lambda/1aef49e1b0518d37fc19bf34a6c16405/invocations/0d237b9d-148e-4cea-81e8-d1e2a13b7c41/response => 202
+2024-09-18T21:13:22.288 DEBUG --- [er:$LATEST_0] l.s.l.i.version_manager    : Got logs for invocation '0d237b9d-148e-4cea-81e8-d1e2a13b7c41'
+2024-09-18T21:13:22.288 DEBUG --- [er:$LATEST_0] l.s.l.i.version_manager    : [s3-event-handler-0d237b9d-148e-4cea-81e8-d1e2a13b7c41] START RequestId: 0d237b9d-148e-4cea-81e8-d1e2a13b7c41 Version: $LATEST
+2024-09-18T21:13:22.288 DEBUG --- [er:$LATEST_0] l.s.l.i.version_manager    : [s3-event-handler-0d237b9d-148e-4cea-81e8-d1e2a13b7c41] Event Received:
+2024-09-18T21:13:22.288 DEBUG --- [er:$LATEST_0] l.s.l.i.version_manager    : [s3-event-handler-0d237b9d-148e-4cea-81e8-d1e2a13b7c41] {'Records': [{'eventVersion': '2.1', 'eventSource': 'aws:s3', 'awsRegion': 'us-east-1', 'eventTime': '2024-09-18T21:13:21.586Z', 'eventName': 'ObjectCreated:Put', 'userIdentity': {'principalId': 'AIDAJDPLRKLG7UEXAMPLE'}, 'requestParameters': {'sourceIPAddress': '127.0.0.1'}, 'responseElements': {'x-amz-request-id': '83cb31fc', 'x-amz-id-2': 'eftixk72aD6Ap51TnqcoF8eFidJG9Z/2'}, 's3': {'s3SchemaVersion': '1.0', 'configurationId': 'tf-s3-lambda-20240918210242106800000001', 'bucket': {'name': 'my-test-bucket', 'ownerIdentity': {'principalId': 'A3NL1KOZZKExample'}, 'arn': 'arn:aws:s3:::my-test-bucket'}, 'object': {'key': 'test_file.txt', 'sequencer': '0055AED6DCD90281E5', 'eTag': '93359788b1400aa421d4bd32172a1812', 'size': 19}}}]}
+2024-09-18T21:13:22.288 DEBUG --- [er:$LATEST_0] l.s.l.i.version_manager    : [s3-event-handler-0d237b9d-148e-4cea-81e8-d1e2a13b7c41] END RequestId: 0d237b9d-148e-4cea-81e8-d1e2a13b7c41
+2024-09-18T21:13:22.288 DEBUG --- [er:$LATEST_0] l.s.l.i.version_manager    : [s3-event-handler-0d237b9d-148e-4cea-81e8-d1e2a13b7c41] REPORT RequestId: 0d237b9d-148e-4cea-81e8-d1e2a13b7c41	Duration: 5.42 ms	Billed Duration: 6 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+2024-09-18T21:13:22.288 DEBUG --- [er:$LATEST_0] l.services.sqs.models      : deleting message f88fe321-893a-4e18-be3d-d51c6ee79ca9 from queue arn:aws:sqs:us-east-1:949334387222:s3-event-handler-035a49fce00fef035840a4706d48d975
+2024-09-18T21:13:27.244 DEBUG --- [et.reactor-1] l.s.s3.notifications       : Submitting task to the executor for notifier <localstack.services.s3.notifications.LambdaNotifier object at 0xffff800937d0>
+2024-09-18T21:13:27.245  INFO --- [et.reactor-1] localstack.request.aws     : AWS s3.DeleteObject => 204
+2024-09-18T21:13:27.249 DEBUG --- [-functhread6] l.services.sqs.models      : de-queued message SqsMessage(id=ed1d22bd-5c5b-4c66-a6fb-5b46715487c7,group=None) from arn:aws:sqs:us-east-1:949334387222:s3-event-handler-035a49fce00fef035840a4706d48d975
+2024-09-18T21:13:27.249 DEBUG --- [-functhread6] l.s.l.i.event_manager      : [s3-event-handler-035a49fce00fef035840a4706d48d975] Got 1 messages
+2024-09-18T21:13:27.249 DEBUG --- [er:$LATEST_0] l.s.l.i.version_manager    : Got an invocation for function arn:aws:lambda:us-east-1:000000000000:function:s3-event-handler:$LATEST with request_id fab6fdc7-b8de-4b66-8fec-419180db2d63
+2024-09-18T21:13:27.249 DEBUG --- [er:$LATEST_0] l.s.l.i.docker_runtime_exe : Sending invoke-payload '{"invoke-id": "fab6fdc7-b8de-4b66-8fec-419180db2d63", "invoked-function-arn": "arn:aws:lambda:us-east-1:000000000000:function:s3-event-handler", "payload": "{\"Records\": [{\"eventVersion\": \"2.1\", \"eventSource\": \"aws:s3\", \"awsRegion\": \"us-east-1\", \"eventTime\": \"2024-09-18T21:13:27.244Z\", \"eventName\": \"ObjectRemoved:Delete\", \"userIdentity\": {\"principalId\": \"AIDAJDPLRKLG7UEXAMPLE\"}, \"requestParameters\": {\"sourceIPAddress\": \"127.0.0.1\"}, \"responseElements\": {\"x-amz-request-id\": \"71f3c178\", \"x-amz-id-2\": \"eftixk72aD6Ap51TnqcoF8eFidJG9Z/2\"}, \"s3\": {\"s3SchemaVersion\": \"1.0\", \"configurationId\": \"tf-s3-lambda-20240918210242106800000001\", \"bucket\": {\"name\": \"my-test-bucket\", \"ownerIdentity\": {\"principalId\": \"A3NL1KOZZKExample\"}, \"arn\": \"arn:aws:s3:::my-test-bucket\"}, \"object\": {\"key\": \"test_file.txt\", \"sequencer\": \"0055AED6DCD90281E5\"}}}]}", "trace-id": "Root=1-66eb4277-0cfd9886eb6d7d65ea266e62;Parent=aa304d99ecec909c;Sampled=0"}' to executor '1aef49e1b0518d37fc19bf34a6c16405'
+2024-09-18T21:13:27.253  INFO --- [et.reactor-2] localstack.request.http    : POST /_localstack_lambda/1aef49e1b0518d37fc19bf34a6c16405/invocations/fab6fdc7-b8de-4b66-8fec-419180db2d63/logs => 202
+2024-09-18T21:13:27.254  INFO --- [et.reactor-1] localstack.request.http    : POST /_localstack_lambda/1aef49e1b0518d37fc19bf34a6c16405/invocations/fab6fdc7-b8de-4b66-8fec-419180db2d63/response => 202
+2024-09-18T21:13:27.255 DEBUG --- [er:$LATEST_0] l.s.l.i.version_manager    : Got logs for invocation 'fab6fdc7-b8de-4b66-8fec-419180db2d63'
+2024-09-18T21:13:27.255 DEBUG --- [er:$LATEST_0] l.s.l.i.version_manager    : [s3-event-handler-fab6fdc7-b8de-4b66-8fec-419180db2d63] START RequestId: fab6fdc7-b8de-4b66-8fec-419180db2d63 Version: $LATEST
+2024-09-18T21:13:27.255 DEBUG --- [er:$LATEST_0] l.s.l.i.version_manager    : [s3-event-handler-fab6fdc7-b8de-4b66-8fec-419180db2d63] Event Received:
+2024-09-18T21:13:27.255 DEBUG --- [er:$LATEST_0] l.s.l.i.version_manager    : [s3-event-handler-fab6fdc7-b8de-4b66-8fec-419180db2d63] {'Records': [{'eventVersion': '2.1', 'eventSource': 'aws:s3', 'awsRegion': 'us-east-1', 'eventTime': '2024-09-18T21:13:27.244Z', 'eventName': 'ObjectRemoved:Delete', 'userIdentity': {'principalId': 'AIDAJDPLRKLG7UEXAMPLE'}, 'requestParameters': {'sourceIPAddress': '127.0.0.1'}, 'responseElements': {'x-amz-request-id': '71f3c178', 'x-amz-id-2': 'eftixk72aD6Ap51TnqcoF8eFidJG9Z/2'}, 's3': {'s3SchemaVersion': '1.0', 'configurationId': 'tf-s3-lambda-20240918210242106800000001', 'bucket': {'name': 'my-test-bucket', 'ownerIdentity': {'principalId': 'A3NL1KOZZKExample'}, 'arn': 'arn:aws:s3:::my-test-bucket'}, 'object': {'key': 'test_file.txt', 'sequencer': '0055AED6DCD90281E5'}}}]}
+2024-09-18T21:13:27.255 DEBUG --- [er:$LATEST_0] l.s.l.i.version_manager    : [s3-event-handler-fab6fdc7-b8de-4b66-8fec-419180db2d63] END RequestId: fab6fdc7-b8de-4b66-8fec-419180db2d63
+2024-09-18T21:13:27.255 DEBUG --- [er:$LATEST_0] l.s.l.i.version_manager    : [s3-event-handler-fab6fdc7-b8de-4b66-8fec-419180db2d63] REPORT RequestId: fab6fdc7-b8de-4b66-8fec-419180db2d63	Duration: 1.30 ms	Billed Duration: 2 ms	Memory Size: 128 MB	Max Memory Used: 128 MB	
+2024-09-18T21:13:27.255 DEBUG --- [er:$LATEST_0] l.services.sqs.models      : deleting message ed1d22bd-5c5b-4c66-a6fb-5b46715487c7 from queue arn:aws:sqs:us-east-1:949334387222:s3-event-handler-035a49fce00fef035840a4706d48d975
