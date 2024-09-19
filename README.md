@@ -117,3 +117,4 @@ Lambda Function Not Triggered: Check IAM permissions and ensure the S3 bucket no
 Errors in Terraform Apply: Double-check your Terraform configuration for typos or missing dependencies.
 
 
+# Minor update
