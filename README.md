@@ -109,12 +109,8 @@ docker-compose down
 
 9. Common Issues
 
-Common Issues
 LocalStack Not Starting: Ensure Docker is running and no other services are using port 4566.
 
 Lambda Function Not Triggered: Check IAM permissions and ensure the S3 bucket notification is correctly configured.
 
 Errors in Terraform Apply: Double-check your Terraform configuration for typos or missing dependencies.
-
-
-# Minor update
