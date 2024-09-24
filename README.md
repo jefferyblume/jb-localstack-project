@@ -1,47 +1,48 @@
-# LocalStack S3 to Lambda Example
+## LocalStack S3 to Lambda Example
 
 This project demonstrates how to use LocalStack to develop and test AWS infrastructure locally using Terraform. It sets up an S3 bucket and a Lambda function that is triggered by S3 bucket events (object creation and deletion).
 
 ## Prerequisites
-
 Before you begin, ensure you have the following installed on your machine:
 
-- **Docker**: For containerization. [Download Docker](https://www.docker.com/get-started)
+Docker: For containerization. Download Docker
 
-- **AWS CLI**: To interact with AWS services. [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+AWS CLI: To interact with AWS services. Install AWS CLI
 
-- **Terraform**: For infrastructure-as-code. [Download Terraform](https://www.terraform.io/downloads.html)
+Terraform: For infrastructure-as-code. Download Terraform
 
-- **Git**: For version control. [Download Git](https://git-scm.com/downloads)
+Git: For version control. Download Git
 
-- **Python 3.8**: To write the Lambda function. [Download Python](https://www.python.org/downloads/)
+Python 3.8: To write the Lambda function. Download Python
 
-- **`awslocal`**: AWS CLI wrapper for LocalStack. Install it using:
+awslocal: AWS CLI wrapper for LocalStack. Install it using:
 
-  ```bash
-  pip install awscli-local
+pip install awscli-local
 
 ## Project Structure
+
 localstack-s3-lambda/
-├── docker-compose.yml
-├── lambda_function/
-│   └── lambda_function.py
-├── lambda_function.zip
-├── main.tf
-├── README.md
-├── run.sh
-└── logs/
-    └── localstack_debug.log
 
-docker-compose.yml: Configuration file to start LocalStack.
-lambda_function/: Directory containing the Lambda function code.
-lambda_function.zip: Zipped Lambda function ready for deployment.
-main.tf: Terraform configuration file defining AWS resources.
-README.md: This documentation file.
-run.sh: Script to interact with AWS resources using awslocal.
-logs/: Directory to store LocalStack debug logs.
+├── docker-compose.yml           # Configuration file to start LocalStack
 
-##Setup Instructions
+├── lambda_function/             # Directory containing the Lambda function code
+
+│   └── lambda_function.py       # Lambda function code
+
+├── lambda_function.zip          # Zipped Lambda function ready for deployment
+
+├── main.tf                      # Terraform configuration file defining AWS resources
+
+├── README.md                    # Project documentation (this file)
+
+├── run.sh                       # Script to interact with AWS resources using awslocal
+
+└── logs/                        # Directory to store LocalStack debug logs
+
+    └── localstack_debug.log     # LocalStack debug log
+
+
+## Setup Instructions
 
 1. Clone this repo and navigate to the proper directory.
 
